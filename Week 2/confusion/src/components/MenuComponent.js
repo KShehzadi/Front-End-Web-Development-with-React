@@ -5,6 +5,7 @@ import { Card, CardImg, CardImgOverlay,
 class Menu extends Component {
 
     render() {
+        console.log("Menu Component render invoked ");
         const menu = this.props.dishes.map((dish) => {
             return (
               <div  className="col-12 col-md-5 m-1">

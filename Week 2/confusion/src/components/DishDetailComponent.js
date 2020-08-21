@@ -3,7 +3,14 @@ import { Card, CardImg, CardText, CardBody, CardTitle } from 'reactstrap';
 
 class DishDetail extends Component {
 
-    
+    componentDidMount()
+    {
+        console.log("DishDetail Component componentDidMount invoked ");
+    }
+    componentDidUpdate()
+    {
+        console.log("DishDetail Component componentDidUpdate invoked ");  
+    }
     renderDish(dish) {
         return (
             <Card>
@@ -42,6 +49,7 @@ class DishDetail extends Component {
     }
 
     render() {
+        console.log("DishDetail Component render invoked ");
         if (this.props.dish) {
             return (
                 <div className="container">
