@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Breadcrumb, BreadcrumbItem,
-    Button, Form, FormGroup, Label, Input, Col, Row, FormFeedback  } from 'reactstrap';
+    Button, Form, FormGroup, Label, Input, Col, FormFeedback  } from 'reactstrap';
 import { Link } from 'react-router-dom';
 
 class Contact extends Component {
@@ -27,6 +27,8 @@ class Contact extends Component {
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleBlur = this.handleBlur.bind(this);
     }
+    
+    
     handleBlur = (field) => (evt) => {
         this.setState({
             touched: { ...this.state.touched, [field]: true }
@@ -122,9 +124,11 @@ class Contact extends Component {
                    </div>
                     <div className="col-12 col-md-9">
                         <Form onSubmit={this.handleSubmit}>
-                        <FormGroup row>
-                                <Label htmlFor="firstname" md={2}>First Name</Label>
-                                <Col md={10}>
+                            
+                            
+                            <FormGroup row>
+                                <Label sm={12} htmlFor="firstname" md={2}>First Name</Label>
+                                <Col sm={12} md={10}>
                                     <Input type="text" id="firstname" name="firstname"
                                         placeholder="First Name"
                                         value={this.state.firstname}
@@ -135,9 +139,10 @@ class Contact extends Component {
                                     <FormFeedback>{errors.firstname}</FormFeedback>
                                 </Col>
                             </FormGroup>
+                            
                             <FormGroup row>
-                                <Label htmlFor="lastname" md={2}>Last Name</Label>
-                                <Col md={10}>
+                                <Label  sm={12} htmlFor="lastname" md={2}>Last Name</Label>
+                                <Col sm={12} md={10}>
                                     <Input type="text" id="lastname" name="lastname"
                                         placeholder="Last Name"
                                         value={this.state.lastname}
@@ -149,8 +154,8 @@ class Contact extends Component {
                                 </Col>
                             </FormGroup>
                             <FormGroup row>
-                                <Label htmlFor="telnum" md={2}>Contact Tel.</Label>
-                                <Col md={10}>
+                                <Label sm={12}  htmlFor="telnum" md={2}>Contact Tel.</Label>
+                                <Col  sm={12} md={10}>
                                     <Input type="tel" id="telnum" name="telnum"
                                         placeholder="Tel. Number"
                                         value={this.state.telnum}
@@ -162,8 +167,8 @@ class Contact extends Component {
                                 </Col>
                             </FormGroup>
                             <FormGroup row>
-                                <Label htmlFor="email" md={2}>Email</Label>
-                                <Col md={10}>
+                                <Label sm={12}  htmlFor="email" md={2}>Email</Label>
+                                <Col sm={12}  md={10}>
                                     <Input type="email" id="email" name="email"
                                         placeholder="Email"
                                         value={this.state.email}
@@ -175,7 +180,7 @@ class Contact extends Component {
                                 </Col>
                             </FormGroup>
                             <FormGroup row>
-                                <Col md={{size: 6, offset: 2}}>
+                                <Col sm={12}  md={{size: 6, offset: 2}}>
                                     <FormGroup check>
                                         <Label check>
                                             <Input type="checkbox"
@@ -186,7 +191,7 @@ class Contact extends Component {
                                         </Label>
                                     </FormGroup>
                                 </Col>
-                                <Col md={{size: 3, offset: 1}}>
+                                <Col sm={12}  md={{size: 3, offset: 1}}>
                                     <Input type="select" name="contactType"
                                             value={this.state.contactType}
                                             onChange={this.handleInputChange}>
@@ -196,8 +201,8 @@ class Contact extends Component {
                                 </Col>
                             </FormGroup>
                             <FormGroup row>
-                                <Label htmlFor="message" md={2}>Your Feedback</Label>
-                                <Col md={10}>
+                                <Label sm={12}  htmlFor="message" md={2}>Your Feedback</Label>
+                                <Col sm={12}  md={10}>
                                     <Input type="textarea" id="message" name="message"
                                         rows="12"
                                         value={this.state.message}
@@ -205,13 +210,13 @@ class Contact extends Component {
                                 </Col>
                             </FormGroup>
                             <FormGroup row>
-                                <Col md={{size: 10, offset: 2}}>
+                                <Col  sm={12} md={{size: 10, offset: 2}}>
                                     <Button type="submit" color="primary">
                                         Send Feedback
                                     </Button>
                                 </Col>
                             </FormGroup>
-                             </Form>
+                        </Form>
                     </div>
                </div>
 
