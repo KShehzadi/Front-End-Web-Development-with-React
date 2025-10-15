@@ -56,7 +56,7 @@ class DishDetail extends Component {
         }
         else {
             return (
-                <div></div>
+                <div>"--"</div>
             );
         }
     }
