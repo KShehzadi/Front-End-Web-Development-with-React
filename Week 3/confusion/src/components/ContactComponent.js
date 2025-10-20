@@ -154,7 +154,7 @@ class Contact extends Component {
                                 </Col>
                             </FormGroup>
                             <FormGroup row>
-                                <Label sm={12}  htmlFor="telnum" md={2}>Contact Tel.</Label>
+                                <Label sm={12}  htmlFor="telnum" md={2}>Contact Telephone</Label>
                                 <Col  sm={12} md={10}>
                                     <Input type="tel" id="telnum" name="telnum"
                                         placeholder="Tel. Number"
